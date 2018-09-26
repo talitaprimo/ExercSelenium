@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="533b9603-a6b2-4a23-9d31-58fdb07da495" name="Default Changelist" comment="" />
+    <list default="true" id="533b9603-a6b2-4a23-9d31-58fdb07da495" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/InformationuserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/InformationuserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/InformationuserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/InformationuserTest.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,23 +18,24 @@
     <session id="-1709510380">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="942" />
+          <entry key="java" value="1203" />
           <entry key="txt" value="5" />
           <entry key="xml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="942" />
+          <entry key="JAVA" value="1203" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="12" />
         </counts>
@@ -52,8 +57,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/InformationuserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="37" column="62" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
+            <state relative-caret-position="113">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,6 +104,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,12 +148,11 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537916047427" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538002295827" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -227,41 +232,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InformationuserTest_testAddInformUser - 2018.08.31 at 11h 53m 13s.xml">
-      <configuration name="InformationuserTest.testAddInformUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InformationuserTest_testAddInformUser - 2018.09.03 at 20h 38m 52s.xml">
-      <configuration name="InformationuserTest.testAddInformUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InformationuserTest - 2018.09.18 at 16h 57m 34s.xml">
-      <configuration name="InformationuserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InformationuserTest - 2018.09.18 at 16h 58m 46s.xml">
-      <configuration name="InformationuserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InformationuserTest - 2018.09.18 at 17h 02m 08s.xml">
-      <configuration name="InformationuserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InformationuserTest_testAddInformUser - 2018.09.18 at 17h 08m 31s.xml">
-      <configuration name="InformationuserTest.testAddInformUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InformationuserTest - 2018.09.25 at 19h 05m 35s.xml">
-      <configuration name="InformationuserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InformationuserTest - 2018.09.25 at 19h 38m 49s.xml">
-      <configuration name="InformationuserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InformationuserTest - 2018.09.25 at 19h 40m 22s.xml">
-      <configuration name="InformationuserTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="InformationuserTest - 2018.09.25 at 19h 45m 20s.xml">
+      <configuration name="InformationuserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InformationuserTest - 2018.09.26 at 18h 57m 23s.xml">
+      <configuration name="InformationuserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InformationuserTest - 2018.09.26 at 19h 02m 59s.xml">
+      <configuration name="InformationuserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InformationuserTest - 2018.09.26 at 19h 04m 13s.xml">
+      <configuration name="InformationuserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InformationuserTest - 2018.09.26 at 19h 21m 06s.xml">
+      <configuration name="InformationuserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InformationuserTest - 2018.09.26 at 19h 34m 54s.xml">
+      <configuration name="InformationuserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InformationuserTest - 2018.09.26 at 19h 35m 16s.xml">
+      <configuration name="InformationuserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InformationuserTest - 2018.09.26 at 19h 44m 52s.xml">
+      <configuration name="InformationuserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InformationuserTest - 2018.09.26 at 19h 45m 20s.xml">
+      <configuration name="InformationuserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InformationuserTest - 2018.09.26 at 19h 45m 55s.xml">
       <configuration name="InformationuserTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="196" width="1366" height="700" extended-state="7" />
+    <frame x="0" y="196" width="1366" height="700" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26363635" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26818183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -270,12 +275,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42105263" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42105263" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.25964913" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.25874126" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32807016" />
@@ -306,8 +311,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/InformationuserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="37" column="62" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
+        <state relative-caret-position="113">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

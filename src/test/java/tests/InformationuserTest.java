@@ -7,12 +7,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class InformationuserTest {
     @Test
     public void testAddInformUser() {
         //Abrir o navegador
         System.setProperty("webdriver.chrome.driver", "/home/talita/Documentos/chromedriver_linux64/chromedriver");
         WebDriver navegador = new ChromeDriver();
+
+        //Aumentar o time out
+        navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         //Maximizar janela do navegador
         navegador.manage().window().maximize();
@@ -37,7 +42,13 @@ public class InformationuserTest {
         //Clicar no link Sign In
         navegador.findElement(By.linkText("SIGN IN")).click();
 
-        //Exemplo de validação
-        assertEquals(1,1);
+        //Validar texto Hi, Julio
+        WebElement me = navegador.findElement(By.className("me"));
+        String textoElem = me.getText();
+        assertEquals("Hi, Julio",textoElem);
+
+        //fechar navegador
+        navegador.quit();
+
     }
 }
