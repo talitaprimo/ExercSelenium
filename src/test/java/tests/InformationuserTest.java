@@ -1,6 +1,9 @@
 package tests;
 
 import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,11 +13,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class InformationuserTest {
-    @Test
-    public void testAddInformUser() {
+    private WebDriver navegador;
+
+    @Before
+    public void Setup() {
         //Abrir o navegador
         System.setProperty("webdriver.chrome.driver", "/home/talita/Documentos/chromedriver_linux64/chromedriver");
-        WebDriver navegador = new ChromeDriver();
+        navegador = new ChromeDriver();
 
         //Aumentar o time out
         navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -25,6 +30,10 @@ public class InformationuserTest {
         //Acessar uma página web
         navegador.get("http://www.juliodelima.com.br/taskit");
         // é necessário inserir o http!
+    }
+
+    @Test
+    public void testAddInformUser() {
 
         //Clicar no link que possui o texto Sign in
         navegador.findElement(By.linkText("Sign in")).click();
@@ -42,13 +51,27 @@ public class InformationuserTest {
         //Clicar no link Sign In
         navegador.findElement(By.linkText("SIGN IN")).click();
 
-        //Validar texto Hi, Julio
-        WebElement me = navegador.findElement(By.className("me"));
-        String textoElem = me.getText();
-        assertEquals("Hi, Julio",textoElem);
+        //Clicar no link Hi, Julio
+        navegador.findElement(By.className("me")).click();
 
-        //fechar navegador
-        navegador.quit();
+        //Clicar no link que possui o texto "MORE DATA ABOUT YOU"
+        navegador.findElement(By.linkText("More data about you")).click();
 
+        //Clicar no botão Add More Data
+        navegador.findElement(By.xpath("//button[@data-target=\"addmoredata\"]")).click();
+
+        //Selecionar uma opção no combo Type
+
+        //Digitar no campo Contact
+
+        //Clicar no link Save
+
+        //Validar mensagem exibida no toast message
     }
+
+        @After
+        public void tearDown(){
+            //fechar navegador
+            navegador.quit();
+        }
 }
