@@ -9,69 +9,85 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.concurrent.TimeUnit;
 
 public class InformationuserTest {
-    private WebDriver navegador;
+  private WebDriver navegador;
 
-    @Before
-    public void Setup() {
-        //Abrir o navegador
-        System.setProperty("webdriver.chrome.driver", "/home/talita/Documentos/chromedriver_linux64/chromedriver");
-        navegador = new ChromeDriver();
+  @Before
+  public void Setup() {
+    // Abrir o navegador
+    System.setProperty(
+        "webdriver.chrome.driver", "/home/talita/Documentos/chromedriver_linux64/chromedriver");
+    navegador = new ChromeDriver();
 
-        //Aumentar o time out
-        navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    // Aumentar o time out
+    navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-        //Maximizar janela do navegador
-        navegador.manage().window().maximize();
+    // Maximizar janela do navegador
+    navegador.manage().window().maximize();
 
-        //Acessar uma página web
-        navegador.get("http://www.juliodelima.com.br/taskit");
-        // é necessário inserir o http!
-    }
+    // Acessar uma página web
+    navegador.get("http://www.juliodelima.com.br/taskit");
+    // é necessário inserir o http!
+  }
 
-    @Test
-    public void testAddInformUser() {
+  @Test
+  public void testAddInformUser() {
 
-        //Clicar no link que possui o texto Sign in
-        navegador.findElement(By.linkText("Sign in")).click();
+    // Mapear e clicar no link que possui o texto Sign in
+    navegador.findElement(By.linkText("Sign in")).click();
 
-        //Identificar o formulário de login
-        WebElement formularioSignInBox = navegador.findElement(By.id("signinbox"));
-        //Variável formularioSignInBox foi criada para que possamos reaproveitar esse mapeamento.
+    // Mapear o formulário de login e atribuir o mapeamento a uma variável para que possamos
+    // reaproveitá-lo.
+    WebElement formularioSignInBox = navegador.findElement(By.id("signinbox"));
 
-        //Digitar no campo Login
-        formularioSignInBox.findElement(By.name("login")).sendKeys("julio0001");
+    // Mapear e digitar no campo Login
+    formularioSignInBox.findElement(By.name("login")).sendKeys("julio0001");
 
-        //Digitar no campo Password
-        formularioSignInBox.findElement(By.name("password")).sendKeys("123456");
+    // Mapear e digitar no campo Password
+    formularioSignInBox.findElement(By.name("password")).sendKeys("123456");
 
-        //Clicar no link Sign In
-        navegador.findElement(By.linkText("SIGN IN")).click();
+    // Mapear e clicar no link Sign In
+    navegador.findElement(By.linkText("SIGN IN")).click();
 
-        //Clicar no link Hi, Julio
-        navegador.findElement(By.className("me")).click();
+    // Mapear e clicar no link Hi, Julio
+    navegador.findElement(By.className("me")).click();
 
-        //Clicar no link que possui o texto "MORE DATA ABOUT YOU"
-        navegador.findElement(By.linkText("More data about you")).click();
+    // Mapear e clicar no link que possui o texto "MORE DATA ABOUT YOU"
+    navegador.findElement(By.linkText("MORE DATA ABOUT YOU")).click();
 
-        //Clicar no botão Add More Data
-        navegador.findElement(By.xpath("//button[@data-target=\"addmoredata\"]")).click();
+    // Mapear e clicar no botão Add More Data
+    navegador.findElement(By.xpath("//button[@data-target=\"addmoredata\"]")).click();
 
-        //Selecionar uma opção no combo Type
+    // Mapear o pop-up onde está o formulário a ser preenchido e colocar esse contexto em uma
+    // variável, para que possa ser reutilizado
+    WebElement popup = navegador.findElement(By.id("addmoredata"));
 
-        //Digitar no campo Contact
+    // Mapear o combobox com nome Type e selecionar a opção Phone
+    WebElement combobox = popup.findElement(By.name("type"));
+    // A classe Select é específica para combobox no Selenium
+    new Select(combobox).selectByVisibleText("Phone");
 
-        //Clicar no link Save
+    // Mapear o campo Contact e digitar o telefone nesse campo
+    popup.findElement(By.name("contact")).sendKeys("5511999999999");
 
-        //Validar mensagem exibida no toast message
-    }
+    // Mapear e clicar no link Save
+    popup.findElement(By.linkText("SAVE")).click();
 
-        @After
-        public void tearDown(){
-            //fechar navegador
-            navegador.quit();
-        }
+    // Mapear toast que exibe a mensagem
+    WebElement mensagem = navegador.findElement(By.id("toast-container"));
+    // capturar o texto da mensagem e atribuir a variável conteudoMsg
+    String conteudoMsg = mensagem.getText();
+    // Validar o texto da mensagem
+    assertEquals("Your contact has been added!", conteudoMsg);
+  }
+
+  @After
+  public void tearDown() {
+    // fechar navegador
+    navegador.quit();
+  }
 }
