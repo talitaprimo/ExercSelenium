@@ -23,7 +23,7 @@ public class InformationuserTest {
         "webdriver.chrome.driver", "/home/talita/Documentos/chromedriver_linux64/chromedriver");
     navegador = new ChromeDriver();
 
-    // Aumentar o time out
+    // Espera implícita
     navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
     // Maximizar janela do navegador
@@ -32,10 +32,6 @@ public class InformationuserTest {
     // Acessar uma página web
     navegador.get("http://www.juliodelima.com.br/taskit");
     // é necessário inserir o http!
-  }
-
-  @Test
-  public void testAddInformUser() {
 
     // Mapear e clicar no link que possui o texto Sign in
     navegador.findElement(By.linkText("Sign in")).click();
@@ -58,6 +54,11 @@ public class InformationuserTest {
 
     // Mapear e clicar no link que possui o texto "MORE DATA ABOUT YOU"
     navegador.findElement(By.linkText("MORE DATA ABOUT YOU")).click();
+
+  }
+
+  @Test
+  public void testAddInformUser() {
 
     // Mapear e clicar no botão Add More Data
     navegador.findElement(By.xpath("//button[@data-target=\"addmoredata\"]")).click();
