@@ -8,12 +8,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import suporte.Generator;
+import suporte.Screenshot;
 
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
 
-public class removerContatoUsuarioTest {
+public class RemoveContactUserTest {
   private WebDriver navegador;
 
   @Before
@@ -75,6 +77,13 @@ public class removerContatoUsuarioTest {
     String conteudoMsg = mensagem.getText();
     // Validar o texto da mensagem
     assertEquals("Rest in peace, dear phone!", conteudoMsg);
+
+    // Tirar e armazenar print
+    Screenshot.print(
+        navegador,
+        "/home/talita/Downloads/PrintsAutomacao/"
+            + Generator.dataHoraAtual()
+            + "RemoveContact.png");
 
     // Espera explícita
     WebDriverWait aguardar = new WebDriverWait(navegador, 10);

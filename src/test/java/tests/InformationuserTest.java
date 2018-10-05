@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import suporte.Generator;
+import suporte.Screenshot;
 
 import java.util.concurrent.TimeUnit;
 
@@ -54,7 +56,6 @@ public class InformationuserTest {
 
     // Mapear e clicar no link que possui o texto "MORE DATA ABOUT YOU"
     navegador.findElement(By.linkText("MORE DATA ABOUT YOU")).click();
-
   }
 
   @Test
@@ -84,6 +85,13 @@ public class InformationuserTest {
     String conteudoMsg = mensagem.getText();
     // Validar o texto da mensagem
     assertEquals("Your contact has been added!", conteudoMsg);
+
+    // Tirar e armazenar print
+    Screenshot.print(
+        navegador,
+        "/home/talita/Downloads/PrintsAutomacao/"
+            + Generator.dataHoraAtual()
+            + "testAddInformUser.png");
   }
 
   @After
