@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -59,6 +60,8 @@ public class removerContatoUsuarioTest {
     @Test
     public void RemoveContact() {
 
+        //Pre-requisito para que o teste funcione: Inserir telefone 551132435354 na página MORE DATA ABOUT YOU
+
         //Identificar a informação (telefone ou e-mail) para clicar no botão Excluir referente a essa informação.
         navegador.findElement(By.xpath("//span[text()=\"551132435354\"]/following-sibling::a")).click();
 
@@ -74,7 +77,10 @@ public class removerContatoUsuarioTest {
 
         //Espera explícita
         WebDriverWait aguardar = new WebDriverWait(navegador, 10);
+        aguardar.until(ExpectedConditions.stalenessOf(mensagem));
 
+        //Fazer logout
+        navegador.findElement(By.linkText("Logout")).click();
 
     }
 
